@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="light">
   <section id="about">
     <!-- User Details -->
     <div class="user-details">
@@ -27,24 +27,12 @@
       <img src="./assets/img/me.svg" alt="me" width="25%" class="profile-pic">
 
       <div class="social-icons">
-        <a href="https://github.com/subodhghulaxe" target="_blank" title="GitHub">
-          <img src="./assets/img/github.svg"  />
-        </a>
-        <a href="https://stackoverflow.com/users/1868660/subodh-ghulaxe" target="_blank" title="Stack Overflow">
-          <img src="./assets/img/stackoverflow.svg"  />
-        </a>
-        <a href="https://codepen.io/subodhghulaxe" target="_blank" title="CodePen">
-          <img src="./assets/img/codepen.svg" />
-        </a>
-        <a href="https://www.linkedin.com/in/subodhghulaxe/" target="_blank" title="LinkedIn">
-          <img src="./assets/img/linkedin.svg" />
-        </a>
-        <a href="https://profiles.wordpress.org/subodhghulaxe/" target="_blank" title="WordPress">
-          <img src="./assets/img/wordpress.svg" />
-        </a>
-        <a href="https://twitter.com/subodhghulaxe" target="_blank" title="Twitter">
-          <img src="./assets/img/twitter.svg" />
-        </a>
+        <a href="https://github.com/subodhghulaxe" target="_blank" title="GitHub" class="github-icon"></a>
+        <a href="https://stackoverflow.com/users/1868660/subodh-ghulaxe" target="_blank" title="Stack Overflow" class="stackoverflow-icon"></a>
+        <a href="https://codepen.io/subodhghulaxe" target="_blank" title="CodePen" class="codepen-icon"></a>
+        <a href="https://www.linkedin.com/in/subodhghulaxe/" target="_blank" title="LinkedIn" class="linkedin-icon"></a>
+        <a href="https://profiles.wordpress.org/subodhghulaxe/" target="_blank" title="WordPress" class="wordpress-icon"></a>
+        <a href="https://twitter.com/subodhghulaxe" target="_blank" title="Twitter" class="twitter-icon"></a>
       </div>
 
       <p>
@@ -179,7 +167,8 @@
     <!-- Project 3 -->
     <div class="user-projects">
       <div class="images-right">
-        <img alt="Personal Website" src="./assets/img/personal-website.png">
+        <img alt="Personal Website" src="./assets/img/personal-website.png" class="show-dark">
+        <img alt="Personal Website" src="./assets/img/personal-website-dark.png" class="show-light">
       </div>
       <div class="contents" style="text-align: center;">
         <h3>Personal Website</h3>
@@ -212,10 +201,13 @@
 
   </section>
 
+  <input id="toggle" class="toggle darkmode" type="checkbox" checked>
+
   <footer class="footer">
     <p>© 2021 Subodh Ghulaxe</p>
   </footer>
 
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

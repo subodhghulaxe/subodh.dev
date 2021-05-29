@@ -165,9 +165,9 @@ h2,
 h3,
 h4,
 strong {
-    margin-top: 1em;
-    padding-top: 1em;
-    line-height: 1.25;
+  margin-top: 1em;
+  padding-top: 1em;
+  line-height: 1.25;
 }
 h2 {
   font-size: 2rem
@@ -177,6 +177,16 @@ h3 {
 }
 h4 {
   font-size: 1rem
+}
+.dark {
+  color: #fff;
+  background-color: #0E1117;
+  transition: .8s;
+}
+.light {
+  color: #000;
+  background-color: #fff;
+  transition: .8s;
 }
 #about {
   width: 90%;
@@ -248,9 +258,37 @@ h4 {
 .social-icons a {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
-}
-.social-icons a img {
   width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.github-icon {
+  background-image: url(../img/github.svg);
+  transition: .8s;
+}
+.dark .github-icon {
+  background-image: url(../img/github-dark.svg);
+  transition: .8s;
+}
+.stackoverflow-icon {
+  background-image: url(../img/stackoverflow.svg);
+}
+.codepen-icon {
+  background-image: url(../img/codepen.svg);
+  transition: .8s;
+}
+.dark .codepen-icon {
+  background-image: url(../img/codepen-dark.png);
+  transition: .8s;
+}
+.linkedin-icon {
+  background-image: url(../img/linkedin.svg);
+}
+.wordpress-icon {
+  background-image: url(../img/wordpress.svg);
+}
+.twitter-icon {
+  background-image: url(../img/twitter.svg);
 }
 .user {
   text-align: center;
@@ -336,10 +374,83 @@ h4 {
     float: left
   }
 }
+.show-dark {
+  display: none;
+}
+.dark .show-light {
+  display: none;
+}
+.dark .show-dark {
+  display: block;
+}
+.toggle {
+  --size: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: #e6e6ff;
+  transition: all 500ms;
+  bottom: 1rem;
+  left: 1rem;
+  position: fixed;
+}
+.toggle:checked {
+  --ray-size: calc(var(--size) * -0.4);
+  --offset-orthogonal: calc(var(--size) * 0.65);
+  --offset-diagonal: calc(var(--size) * 0.45);
+  transform: scale(0.75);
+  color: #ffaa00;
+  box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+@-webkit-keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
+@keyframes open {
+  0% {
+    bottom: 3rem;
+    left: 3rem;
+    width: 0rem;
+    height: 0rem;
+    -webkit-clip-path: circle(0rem at center);
+            clip-path: circle(0rem at center);
+  }
+  100% {
+    bottom: calc(-250vmax + 3rem);
+    left: calc(-250vmax + 3rem);
+    width: 500vmax;
+    height: 500vmax;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
 .footer {
   background: #403E3E;
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;
   color: #fff
+}
+.dark .footer {
+  background-color: #161B22;
 }
