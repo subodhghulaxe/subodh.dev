@@ -12,3 +12,10 @@ document.getElementById('toggle').onclick = function() {
     mode = "light";
   }
 }
+
+// Hide a mobile browser's address bar
+window.addEventListener("load",function() {
+  setTimeout(function() {
+    window.scrollTo(0, 1);
+  }, 0);
+});
