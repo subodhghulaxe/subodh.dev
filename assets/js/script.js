@@ -14,8 +14,10 @@ document.getElementById('toggle').onclick = function() {
 }
 
 // Hide a mobile browser's address bar
-window.addEventListener("load",function() {
-  setTimeout(function() {
-    window.scrollTo(0, 1);
-  }, 0);
-});
+if((Browser.Platform.ios) || (Browser.Platform.webos) || (Browser.Platform.android)) {
+	window.addEventListener("load",function() {
+	  setTimeout(function(){
+		window.scrollTo(0, 1);
+	  }, 0);
+	});
+}
