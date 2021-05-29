@@ -235,8 +235,22 @@ h4 {
   padding-top: 0.5rem;
 }
 .user-details p {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 0;
+}
+.social-icons {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.social-icons a {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.social-icons a img {
+  width: 32px;
 }
 .user {
   text-align: center;
