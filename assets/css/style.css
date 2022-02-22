@@ -290,6 +290,14 @@ h4 {
 .twitter-icon {
   background-image: url(../img/twitter.svg);
 }
+.medium-icon {
+  background-image: url(../img/medium.svg);
+  transition: .8s;
+}
+.dark .medium-icon {
+  background-image: url(../img/medium-dark.svg);
+  transition: .8s;
+}
 .user {
   text-align: center;
   font-size: 60px;
