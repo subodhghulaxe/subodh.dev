@@ -334,6 +334,16 @@ h4 {
   max-width: 960px;
   margin: 0 auto
 }
+.project-link {
+  display: inline-block;
+  margin-top: 7px;
+  background-color: #FEDD03;
+  padding: 7px 10px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px grey;
+}
 @media only screen and (min-width:550px) {
   #projects {
     width: 80%
